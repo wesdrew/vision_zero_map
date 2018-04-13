@@ -1,0 +1,38 @@
+﻿"Field Name, Data Type, Required",Description
+"[COMPNOS] [int] NOT NULL,",Internal BPD report number
+"[REPORTINGAREA] [nvarchar](20) NULL,",RA number associated with the where the crime was reported from.
+"[INCIDENT_TYPE_DESCRIPTION] [nvarchar](200) NULL,",BPD incident classification
+"[REPTDISTRICT] [nvarchar](100) NULL,",What district the crime was reported in
+"[FROMDATE] [datetime2](7) NULL,",Earliest date and time the incident could have taken place
+"[TODATE] [datetime2](7) NULL,",Latest date and time the incident could have taken place
+"[STREETNAME] [nvarchar](100) NULL,",Street name the incident took place
+"[XSTREETNAME] [nvarchar](100) NULL,",optional - Cross street the incident took place
+"[WEAPONTYPE] [nvarchar](100) NULL,",Detailed info on the weapon type (free form field)
+"[BUILDINGTYPE] [nvarchar](100) NULL,","Info on where the incident took place (street, Hospital, Convenience Store)"
+"[PLACEOFENTRY] [nvarchar](100) NULL,",Point of entry.  Only relevant with specific incident types
+"[PERPETRATORSNOS] [smallint] NULL,",Total number of suspects involved
+"[SUSPECTTRANSPORTATION] [nvarchar](100) NULL,",Vehicle info (if known) of the suspects involved
+"[VICTIMACTIVITY] [nvarchar](300) NULL,","What the victim was doing at the time of incident (""Walking"", ""Driving"", etc)"
+"[UNUSUALACTIONS] [nvarchar](300) NULL,",optional - but will typically include an expression or something a suspect said while committing the crime or something different that they did during the crime
+"[WEATHER] [nvarchar](100) NULL,",Weather related info at the time of the incident
+"[NEIGHBORHOOD] [nvarchar](100) NULL,",Boston Police Defined Neighborhood the incident took place
+"[LIGHTING] [nvarchar](100) NULL,",Visibility info at the time of the incident
+"[CLEARANCESTATUSDESC] [nvarchar](100) NULL,",An incident is cleared when either the suspect is arrested or the case is tabled due to it being exceptionally cleared (no who it is but victim chooses not to press charges
+"[MAIN_CRIMECODE] [nvarchar](15) NULL,",BRIC classification of the crime code for analysis purposes
+"[ROBBERY_TYPE] [nvarchar](25) NULL,","""Street"", ""Commercial"", ""Bank"", ""Other"".  Only relevant if the incident is a Robbery (03xx Main_Crimecode)"
+"[ROBBERY_ATTEMP] [nvarchar](10) NULL,",Was the robbery an attempt only
+"[BURGLARY_TIME] [nvarchar](10) NULL,","""Night"", ""Day"".  Only relevant if the incident is either commercial burglary (05CB) or residential burglary (05RB)"
+"[DOMESTIC] [nvarchar](10) NULL,",Was the suspect a family member or intimate partner of the victim
+"[WEAPON_TYPE] [nvarchar](100) NULL,","BRIC classification of weapon type (""Gun"", ""Knife"", ""Other"", ""Unarmed"")"
+"[SHIFT] [nvarchar](50) NULL,","What shift (Day, First, Last) the incident took place on"
+"[DAY_WEEK] [nvarchar](50) NULL,",What day of the week the incident took place
+"[UCRPART] [nvarchar](20) NULL,","Universal Crime Reporting Part number (1,2, 3)"
+"[X] [numeric](38, 8) NULL,","X coordinate (state plane, feet) of the geocoded address location (obscured to the street segment centroid for privacy)."
+"[Y] [numeric](38, 8) NULL,","Y coordinate (state plane, feet) of the geocoded address location(obscured to the street segment centroid for privacy)."
+"[GREPORTING] [varchar](50) NULL,",Reporting area of the geocoded location of the Incident
+"[GSECTOR] [varchar](50) NULL,",Sector of the geocoded location of the Incident
+"[GBEAT] [varchar](40) NULL,",Beat of the gecoded location of the incident
+"[GDISTRICT] [varchar](10) NULL,",District of the geocoded location of the Incident
+"[GDISTRICT_PRE2009] [varchar](10) NULL,",District pre 2009 of the gecoded location of the Incident
+"[COMPUTEDCRIMECODE] [nvarchar](20) NULL,",Crime code determined by looking at all of the supplements involved in the incident and determining the lowest crime code.  The lower the crimecode the more serious the crime
+"[COMPUTEDCRIMECODEDESC] [nvarchar](255) NULL,",Textual description of the above crime code
